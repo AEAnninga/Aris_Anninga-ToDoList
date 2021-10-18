@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Todo List</title>
+      <link rel="stylesheet" href="CSS/main.css">
+      
+    </head>
+
+    <body>
+
+        <header class="title">To Do List</header>
+
+        <nav class="task-nav">
+            <label for="add-task">Task description</label>
+            <input type="text" name="addTask" id="add-task" placeholder="Describe task">
+            <button type="submit" name="addTask" id="btn-submit-task">Add</button>  
+        </nav>
+
+        <section>
+            <ul id="todo-list">
+            </ul>
+        </section>
+        <script defer type="text/javascript" src="javascript/api-client.js"></script>
+        <script defer type="text/javascript" src="javascript/script.js"></script>
+    </body>
+</html>
