@@ -5,7 +5,7 @@ const taskInput = document.getElementById('add-task');
 const todoList = document.getElementById('todo-list');
 
 // toevoegen taak aan database
-const postTask = async() => {
+const postTask = async () => {
     try {
         await fetch(baseUrl, {
             method: 'POST', 
@@ -24,7 +24,7 @@ const postTask = async() => {
 }
 
 // opvragen hele database
-const getTask = async() => {
+const getTask = async () => {
     try {
         const response = await fetch(baseUrl, {
             method: 'GET',
@@ -39,7 +39,7 @@ const getTask = async() => {
 }
 
 // aanpassen taak in database en in de DOM
-const changeTask = async(task) => {
+const changeTask = async (task) => {
     try {
         let newTask = task.value
         let id = task.parentElement.id
@@ -58,6 +58,8 @@ const changeTask = async(task) => {
             <input type="text" name="Task" class="task" value='${newTask}'>
             <img value='${id}'  src="images/garbage.png" alt="garbage-bin">
         `
+        let taskParent = task.parentElement
+        console.log(taskParent)
         task.parentElement.innerHTML = listItem
         // en dan ook weer eventListeners, anders werkt dat ook niet meer
         addEventListeners()
@@ -75,7 +77,7 @@ const changeTask = async(task) => {
     }
 }
 
-const doneTask = async(checkbox) => {
+const doneTask = async (checkbox) => {
     try {
         let task = checkbox.parentElement.children[1]
         let id = task.parentElement.id
@@ -125,16 +127,16 @@ const doneTask = async(checkbox) => {
     }
 }
 
-const removeListItem = async(uniqueId) => {
+const removeListItem = async (uniqueId) => {
     try {
         await fetch(`${baseUrl}${uniqueId}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json"
             }
-        })
+        });
         let listItem = document.getElementById(`${uniqueId}`);
-        listItem.parentElement.removeChild(listItem)
+        listItem.parentElement.removeChild(listItem);
     } catch (err) {
         console.log(err)
     }

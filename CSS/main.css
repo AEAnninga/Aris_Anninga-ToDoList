@@ -10,6 +10,7 @@
 }
 *, body {
   font-family: Comfortaa-Regular;
+  background: lightgrey;
 }
 
 .title {
@@ -30,11 +31,15 @@
   width: 500px;
   text-align: center;
   border-radius: 5px;
+  background: whitesmoke;
+  font-weight: bold;
 }
 .task-nav button {
   width: 50px;
   border-radius: 5px;
   font-weight: bold;
+  background: #69c;
+  color: whitesmoke;
 }
 
 #todo-list {
@@ -54,6 +59,7 @@
   border: 1px solid #69c;
   padding: 10px;
   border-radius: 5px;
+  background: whitesmoke;
 }
 #todo-list li .check-task {
   height: 20px;
@@ -65,6 +71,8 @@
   height: 20px;
   border: none;
   flex: 3;
+  background: whitesmoke;
+  font-weight: bold;
 }
 #todo-list li .stripe {
   text-decoration: line-through;
@@ -72,4 +80,5 @@
 #todo-list li img {
   height: 20px;
   cursor: pointer;
+  background: whitesmoke;
 }/*# sourceMappingURL=main.css.map */

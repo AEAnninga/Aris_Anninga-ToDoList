@@ -7,6 +7,7 @@
 
 *, body {
     font-family: Comfortaa-Regular;
+    background: lightgrey;
 }
 
 .title {
@@ -26,11 +27,15 @@
         width: 500px;
         text-align: center;
         border-radius: 5px;
+        background: whitesmoke;
+        font-weight: bold;
     }
     button {
         width: 50px;
         border-radius: 5px;
         font-weight: bold;
+        background: #69c;
+        color: whitesmoke;
     }
 }
 
@@ -50,6 +55,7 @@
         border: 1px solid #69c;
         padding: 10px;
         border-radius: 5px;
+        background: whitesmoke;
         .check-task {
             height: 20px;
             flex: 1;
@@ -60,6 +66,8 @@
             height: 20px;
             border: none;
             flex: 3;
+            background: whitesmoke;
+            font-weight: bold;
         }
         .stripe {
             text-decoration: line-through;
@@ -67,9 +75,7 @@
         img {
             height: 20px;
             cursor: pointer;
-            
+            background: whitesmoke; 
         }
-
     }
-
 }
